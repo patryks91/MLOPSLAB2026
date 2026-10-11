@@ -1,0 +1,40 @@
+[project]
+name = "sentiment-homework"
+version = "0.1.0"
+description = "Sentiment analysis API for MLOps lab 01"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "clean-text>=0.7.1",
+    "fastapi>=0.143.0",
+    "joblib>=1.6.0",
+    "scikit-learn==1.7.2",
+    "sentence-transformers>=6.1.0",
+    "torch>=2.14.1",
+    "uvicorn>=0.54.0",
+]
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "mypy>=2.4.0",
+    "pre-commit>=4.6.2",
+    "pytest>=9.1.1",
+    "ruff>=0.17.0",
+]
+[tool.mypy]
+python_version = "3.12"
+check_untyped_defs = true
+disallow_untyped_defs = true
+warn_unused_ignores = true
+exclude = '(^|/)(\.venv|models)/'
+[[tool.mypy.overrides]]
+module = ["joblib", "joblib.*", "sklearn", "sklearn.*"]
+ignore_missing_imports = true
