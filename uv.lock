@@ -76,6 +76,7 @@ dependencies = [
     { name = "pre-commit" },
     { name = "pydantic-settings" },
     { name = "python-dotenv" },
+    { name = "pyyaml" },
     { name = "scikit-learn" },
 ]
 
@@ -84,6 +85,7 @@ requires-dist = [
     { name = "pre-commit", specifier = ">=4.6.2" },
     { name = "pydantic-settings", specifier = ">=2.15.0" },
     { name = "python-dotenv", specifier = ">=1.2.4" },
+    { name = "pyyaml", specifier = ">=6.0.3" },
     { name = "scikit-learn", specifier = ">=1.9.1" },
 ]
 
