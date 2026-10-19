@@ -2,7 +2,7 @@
 
 ## Run locally
 
-Run from `homework/lab01`:
+Run from `lab1/homework`:
 
 ```bash
 uv sync

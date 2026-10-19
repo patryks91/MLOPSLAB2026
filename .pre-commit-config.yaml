@@ -12,18 +12,18 @@ repos:
      rev: v0.9.0
      hooks:
        - id: xenon
-         exclude: ^homework/
+         exclude: ^lab[0-9]+/homework/
          args:
            - --max-absolute=B
            - --max-modules=B
            - --max-average=A
-           - --exclude=homework/*
+           - --exclude=lab1/homework/*,lab2/*
    - repo: local
      hooks:
        - id: mypy-homework
          name: mypy homework lab01
-         entry: uv run --project homework/lab01 mypy --config-file homework/lab01/pyproject.toml homework/lab01
+         entry: uv run --project lab1/homework mypy --config-file lab1/homework/pyproject.toml lab1/homework
          language: system
          types: [python]
-         files: ^homework/lab01/.*\.py$
+         files: ^lab1/homework/.*\.py$
          pass_filenames: false

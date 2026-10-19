@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local lab 2 datasets and generated database files
+/lab2/labs/data/*
+!/lab2/labs/data/*.sql
+!/lab2/labs/data/.gitkeep
+/lab2/homework/data/
