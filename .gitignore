@@ -224,3 +224,7 @@ __marimo__/
 !/lab2/labs/data/*.sql
 !/lab2/labs/data/.gitkeep
 /lab2/homework/data/
+
+# Local lab 3 datasets
+/lab3/labs/data/
+/lab3/homework/dataset.parquet
